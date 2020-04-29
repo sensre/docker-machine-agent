@@ -3,12 +3,13 @@
 # please consult the product documentation: https://docs.appdynamics.com/
 
 FROM ubuntu:14.04
-
 # Install required packages
-RUN apt-get update && \
-    apt-get upgrade -y && \
-    apt-get install -y unzip && \
-    apt-get clean
+# Install required packages
+#RUN apt-get update -y && \
+#    apt-get upgrade -y && \
+#    apt-get install -y unzip && \
+#    apt-get clean
+RUN apt-get install unzip -y && apt-get clean
 
 # Install AppDynamics Machine Agent
 ENV MACHINE_AGENT_HOME /opt/appdynamics/machine-agent/
